@@ -17,7 +17,9 @@ public class Main {
 		
 		Room currentRoom = rm.startingRoom;
 		
-		player.
+		player.setCurrentRoom(rm.getStartingRoom);
+		
+		printRoom(player);
 		
 		boolean quit = false;
 		
@@ -46,8 +48,13 @@ public class Main {
 				}
 			if(nextRoom != null) {
 				currentRoom = nextRoom;
+				}
 			}
-			}
+		
+		private static String [] collectInput() {
+			String[] userInput = input.nextLine().split(" ");
+			return userInput;
+		}
 			
 			
 			scanr.close();
