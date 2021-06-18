@@ -24,42 +24,25 @@ public class RoomManager {
 		allRooms[2] = bthRoom;
 		allRooms[3] = bedRoom;
 	
-//	lvRoom.setNorthExit(bedRoom);
-//	lvRoom.setRightExit(null);
-//	lvRoom.setLeftExit(kitRoom);
-//	lvRoom.setSouthExit(null); //could make this the front door if I add room called front-door
-	lvRoom.setRmExit("north", bedRoom);
-	lvRoom.setRmExit("right", null);
-	lvRoom.setRmExit("left", kitRoom);
-	lvRoom.setRmExit("south", null); //could make this the front door if I add room called front-door
+	lvRoom.setNorthExit(bedRoom);
+	lvRoom.setRightExit(null);
+	lvRoom.setLeftExit(kitRoom);
+	lvRoom.setSouthExit(null); //could make this the front door if I add room called front-door
 	
+	kitRoom.setNorthExit(bthRoom);
+	kitRoom.setRightExit(lvRoom);
+	kitRoom.setLeftExit(null);
+	kitRoom.setSouthExit(null); 
 	
-//	kitRoom.setNorthExit(bthRoom);
-//	kitRoom.setRightExit(lvRoom);
-//	kitRoom.setLeftExit(null);
-//	kitRoom.setSouthExit(null); 
-	kitRoom.setRmExit("north", bthRoom);
-	kitRoom.setRmExit("right", lvRoom);
-	kitRoom.setRmExit("left", null);
-	kitRoom.setRmExit("south", null); 
+	bthRoom.setNorthExit(null);
+	bthRoom.setRightExit(bedRoom);
+	bthRoom.setLeftExit(null);
+	bthRoom.setSouthExit(kitRoom); 
 	
-//	bthRoom.setNorthExit(null);
-//	bthRoom.setRightExit(bedRoom);
-//	bthRoom.setLeftExit(null);
-//	bthRoom.setSouthExit(kitRoom); 
-	bthRoom.setRmExit("north", null);
-	bthRoom.setRmExit("right", bedRoom);
-	bthRoom.setRmExit("left", null);
-	bthRoom.setRmExit("south", kitRoom); 
-	
-//	bedRoom.setNorthExit(null);
-//	bedRoom.setRightExit(null);
-//	bedRoom.setLeftExit(bthRoom);
-//	bedRoom.setSouthExit(lvRoom); 
-	bedRoom.setRmExit("north", null);
-	bedRoom.setRmExit("right", null);
-	bedRoom.setRmExit("left", bthRoom);
-	bedRoom.setRmExit("south", lvRoom); 
+	bedRoom.setNorthExit(null);
+	bedRoom.setRightExit(null);
+	bedRoom.setLeftExit(bthRoom);
+	bedRoom.setSouthExit(lvRoom); 
 	
 	}
 

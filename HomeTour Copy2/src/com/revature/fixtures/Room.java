@@ -1,8 +1,6 @@
 package com.revature.fixtures;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /*
  * A Room in the house. It will extend fixtures.Fixture, and so will inherit the descriptive properties.
@@ -10,10 +8,9 @@ import java.util.Map;
 public class Room extends Fixture{
 	
 	//Exits for each specified
-	//public Room[] exits = new Room[4];
-	private Map<String, Room> exits = new HashMap<String, Room>();
+	public Room[] exits = new Room[4];
 	
-//	Arrays[] Room;
+	Arrays[] Room;
 	
 	public Room(){
 		super("name", "shortDescription", "longDescription");
@@ -30,22 +27,11 @@ public class Room extends Fixture{
 	}
 	
 	//getters
-	
-	public Map<String, Room> getExits(){
-	return exits;	
+	public Room getLeftExit() {
+		return exits[3];
 	}
 	
-	public String getName() {
-		return this.name;
-	}
-	
-//	public Room getLeftExit() {
-	public Room getRmExit(String direction) {
-//		return exits[3];
-		return exits.get(direction);
-	}
-	
-/*	public Room getRightExit() {
+	public Room getRightExit() {
 		return exits[1];
 	}
 	
@@ -55,14 +41,10 @@ public class Room extends Fixture{
 	
 	public Room getSouthExit() {
 		return exits[2];
-	}								*/
+	}
 	
 	//setters
-	
-	public void setRmExit(String key, Room exit) {
-		exits.put(key, exit);
-	}
-/*	public void setLeftExit(Room exit) {
+	public void setLeftExit(Room exit) {
 		exits[3] = exit;
 	}
 	
@@ -76,7 +58,7 @@ public class Room extends Fixture{
 	
 	public void setSouthExit(Room exit) {
 		exits[2] = exit;
-	}											*/
+	}
 	
 	public Room getExit(String direction) {
 		return null;
@@ -92,12 +74,5 @@ public class Room extends Fixture{
 		return "Room [name = the " + name + "]";
 	}
 	
-	public void printExits() {
-		System.out.println("Exits: \n");
-		for(String key: exits.keySet()) {
-			Room value=exits.get(key);
-			System.out.println(key + ":" + value.getName());
-		}
-	}
 	
 }

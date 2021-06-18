@@ -8,7 +8,7 @@ public class Main {
 	protected static Scanner scanr = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		//set-up rooms
+		//set-up roooms
 		//set-up player
 		
 		RoomManager rm = new RoomManager();
@@ -38,25 +38,17 @@ public class Main {
 				continue;
 
 			}
-//			System.out.println("Reached line Main-41\n");
+			System.out.println("Reached line Main-41\n");
 
 			Room nextRoom = null;
 			if(input.trim().toLowerCase().equals("left")) {
-		//		nextRoom = currentRoom.getLeftExit();
-				nextRoom = currentRoom.getRmExit("left");
-
+				nextRoom = currentRoom.getLeftExit();
 			}else if (input.trim().toLowerCase().equals("right")) {
-		//			nextRoom = currentRoom.getRightExit();
-					nextRoom = currentRoom.getRmExit("right");
-					
+					nextRoom = currentRoom.getRightExit();
 			}else if (input.trim().toLowerCase().equals("north")) {
-		//				nextRoom = currentRoom.getNorthExit();
-						nextRoom = currentRoom.getRmExit("north");
-
+						nextRoom = currentRoom.getNorthExit();
 			}else if (input.trim().toLowerCase().equals("south")) {
-		//					nextRoom = currentRoom.getSouthExit();
-							nextRoom = currentRoom.getRmExit("south");
-
+							nextRoom = currentRoom.getSouthExit();
 				}
 			if(nextRoom != null) {
 				currentRoom = nextRoom;
