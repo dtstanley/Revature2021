@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+    <h1 align="center" style="color:purple;"><u> Car Input form </u></h1>
+
+    <script type="text/javascript">
+        function validateForm() {
+            var p = document.forms["myForm"]["id"].value;
+            if (p == null || p == "") {
+                alert("Car Entry Id must be filled out");
+                document.myForm.id.focus();
+                return false;
+            }
+            var x = document.forms["myForm"]["firstname"].value;
+            if (x == null || x == "") {
+                alert("Owner's first name must be filled out");
+                document.myForm.firstname.focus();
+                return false;
+            }
+
+            var y = document.forms["myForm"]["lastname"].value;
+            if (y == null || y == "") {
+                alert("Owner's last name must be filled out");
+                document.myForm.lastname.focus();
+                return false;
+            }
+            var w = document.forms["myForm"]["city"].value;
+            if (w == null || w == "") {
+                alert("Owner's city of residence must be filled out");
+                document.myForm.city.focus();
+                return false;
+            }
+
+            var v = document.forms["myForm"]["state"].value;
+            if (v == null || v == "") {
+                alert("Owner's state of residence must be filled out");
+                document.myForm.state.focus();
+                return false;
+            }
+            var a = document.forms["myForm"]["cyear"].value;
+            if (a == null || a == "") {
+                alert("Year of must be filled out");
+                document.myForm.cyear.focus();
+                return false;
+            }
+
+            var o = document.forms["myForm"]["color"].value;
+            if (o == null || o == "") {
+                alert("Car's color must be filled out");
+                document.myForm.color.focus();
+                return false;
+            }
+
+            var m = document.forms["myForm"]["model"].value;
+            if (m == null || m == "") {
+                alert("Car's model must be filled out");
+                document.myForm.model.focus();
+                return false;
+            }
+
+            var n = document.forms["myForm"]["make"].value;
+            if (n == null || n == "") {
+                alert("Car's make must be filled out");
+                document.myForm.make.focus();
+                return false;
+            }
+
+            var t = document.forms["myForm"]["clicense"].value;
+            if (t == null || t == "") {
+                alert("Owner's car license plate must be filled out");
+                document.myForm.clicense.focus();
+                return false;
+            }
+            var c = document.forms["myForm"]["email"].value;
+            var atpos = c.indexOf("@");
+            var dotpos = c.lastIndexOf(".");
+
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= c.length) {
+                alert("Not a valid e-mail address");
+                document.myForm.email.focus();
+                return false;
+            }
+
+            var d = document.forms["myForm"]["phonenum"].value;
+            if (d == null || d == "") {
+                alert("Owner's phone number must be filled out");
+                document.myForm.phonenum.focus();
+                return false;
+            }
+            var f = document.forms["myForm"]["engine"].value;
+            if (f == null || f == "") {
+                alert("Car engine must be selected");
+                document.myForm.engine.focus();
+                return false;
+            }
+            var g = document.forms["myForm"]["cstyle"].value;
+            if (g == null || g == "") {
+                alert("Car body style must be selected");
+                document.myForm.cstyle.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color:skyblue;">
+    <form name="myForm" onsubmit="return validateForm()" action=RegistrationServlet method="post">
+        <table align="center">
+            <tr>
+                <td> Car Entry Id:</td>
+                <td><input type="text" name="id" /><br /></td>
+            </tr>
+            <tr>
+                <td> Owner's First Name:</td>
+                <td><input type="text" name="firstname" /><br /></td>
+            </tr>
+            <tr>
+                <td> Owner's Last Name:</td>
+                <td> <input type="text" name="lastname" /><br/></td>
+            </tr>
+            <tr>
+                <td> City:</td>
+                <td><input type="text" name="city" /><br /></td>
+            </tr>
+            <tr>
+                <td> State:</td>
+                <td> <input type="text" name="state" /><br/></td>
+            </tr>
+            <tr>
+                <td> Year of Car:</td>
+                <td><input type="text" name="cyear" /></br>
+                </td>
+            </tr>
+
+            <!-- <tr>
+                <td> Car's Gender:</td>
+                <td>
+                    </br>
+                    <input type="radio" name="sex" value="male" /> Male
+                    <input type="radio" name="sex" value="female" /> Female
+                </td>
+            </tr> -->
+
+            <tr>
+                <td> E-mail:</td>
+                <td><input type="text" name="email" /><br /></td>
+            </tr>
+            <tr>
+                <td>
+                    Owner's Phone No:</td>
+                <td><input type="text" name="phonenum" /><br /></td>
+            </tr>
+
+            <tr>
+                <td> Make of Car:</td>
+                <td><input type="text" name="make" /><br /></td>
+            </tr>
+            <tr>
+                <td> Model of Car:</td>
+                <td><input type="text" name="model" /><br /></td>
+            </tr>
+            <tr>
+                <td> Color of Car:</td>
+                <td><input type="text" name="color" /><br /></td>
+            </tr>
+            <tr>
+                <td> Price of Car:</td>
+                <td><input type="text" name="price" /><br /></td>
+            </tr>
+            <tr>
+                <td> Previous Car:</td>
+                <td><input type="text" name="cprevious" /><br /></td>
+            </tr>
+            <tr>
+                <td> Next Car:</td>
+                <td><input type="text" name="cnext" /><br /></td>
+            </tr>
+            <tr>
+                <td> Fantasy Car:</td>
+                <td><input type="text" name="cfantasy" /><br /></td>
+            </tr>
+            <tr>
+                <td> Licese Plate No:</td>
+                <td><input type="text" name="clicense" /><br /></td>
+            </tr>
+            <tr>
+                <td> Car Vin No:</td>
+                <td><input type="text" name="cvin" /><br /></td>
+            </tr>
+            <tr>
+                <td> Description:</td>
+                <td><input type="text" name="cdescrip" /><br /></td>
+            </tr>
+            <tr>
+                <td> Accessories:</td>
+                <td><input type="text" name="caccess" /><br /></td>
+            </tr>
+            <tr>
+                <td> Car Rating: (10 = best)</td>
+                <br>
+                <td>
+                    </br>
+                    <input type="radio" name="crating" value="1" /> 1
+                    <input type="radio" name="crating" value="2" /> 2
+                    <input type="radio" name="crating" value="3" /> 3
+                    <input type="radio" name="crating" value="4" /> 4
+                    <input type="radio" name="crating" value="5" /> 5<br />
+                    <input type="radio" name="crating" value="6" /> 6
+                    <input type="radio" name="crating" value="7" /> 7
+                    <input type="radio" name="crating" value="8" /> 8
+                    <input type="radio" name="crating" value="9" /> 9
+                    <input type="radio" name="crating" value="10" /> 10</br>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Car engine:</td>
+                <td> <select name="engine" />
+                    <option value="gas">gas</option>
+                    <option value="electric">electric</option>
+                    <option value="hybrid">hybrid</option>
+                    <option value="hydrogen">hydrogen</option>
+                    <option value="diesel">diesel</option>
+                    <option value="other">other</option>
+                    </select>
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td> Car Body Style:</td>
+                <td> <select name="cstyle" />
+                    <option value="suv">suv</option>
+                    <option value="sports-car">sports-car</option>
+                    <option value="van">van</option>
+                    <option value="truck">truck</option>
+                    <option value="economy">economy</option>
+                    <option value="luxury">luxury</option>
+                    <option value="wagon">wagon</option>
+                    <option value="junk">junk</option>
+                    <option value="sedan">sedan</option>
+                    <option value="other">other</option>
+                    </select>
+                    </br>
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="Submit" value="submit" name="s1">
+                    <input type="reset" value="reset" /></td>
+                <td> <input type="Submit" value="insert" name="s1">
+                    <input type="Submit" value="update" name="s1"></td>
+                <td> <input type="Submit" value="delete" name="s1"> </td>
+            </tr>
+    </form>
+</body>
+
+</html>
