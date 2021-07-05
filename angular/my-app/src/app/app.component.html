@@ -1,0 +1,69 @@
+<div>
+    <h2>Hello there {{title}}</h2>
+    <button (click)="onClick()">Click</button>
+
+    <input type="text" [value]="title">
+    <h2>
+        {{year}} {{myObject | json }} {{myObject.name }}
+    </h2>
+
+    <br/> {{name}}
+    <!--Event binding to a field with [] and () and $ -->
+    <input type="text" name="name" (input)="changeNameHandler($event)" [value]="name">
+    <!-- <button disabled="true">Submit</button> -->
+
+    <!-- Property binding by using []
+    <button [disabled]="inactive">Submit</button> -->
+    <!-- Event binding  using ( )-->
+    <button [disabled]="inactive" (click)="submit()">Submit</button>
+
+    <app-product></app-product>
+    <app-product></app-product>
+    <app-product></app-product>
+
+
+    <br/>
+    <form action="">
+        <!-- e-mail: <input type="text" name="email" {(ngModel)]="first_name" }> -->
+        <label for="email">e-mail:</label> <input type="text" name="email">
+        <br> <label for="password">Password:</label><input type="text" name="password">
+        <input type="submit">
+    </form>
+
+    {{first_name}}
+
+    <h2>
+        <app-note></app-note>
+    </h2>
+    <h2>
+        <app-midget></app-midget>
+    </h2>
+
+</div>
+
+<!--
+<app-root></app-root>
+<app-note></app-note>
+
+ <div>
+    <input type="text" #inputText>
+    <h2></h2>
+    <button (click)="searchText()">Search</button>
+</div> -->
+
+<!-- div *ngIf="true:" -->
+
+<!--
+<div>
+    
+    <a style="padding-right: 1em" routerLink="/">Home</a>
+     <a style="padding-right: 1em" [routerLink]="['products']">Products</a> 
+    <a style="padding-right: 1em" href="/blog">Blog</a>
+
+</div>
+<h1>
+    {{title}}
+</h1>
+<app-note></app-note>
+<router-outlet></router-outlet> 
+-->
