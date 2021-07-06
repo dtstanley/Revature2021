@@ -8,6 +8,11 @@ import { MidgetComponent } from './midget/midget.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { PostComponent } from './post/post.component';
+import { AppCartComponent } from './project/app-cart/app-cart.component';
+import { VehiclesComponent } from './vimalEx/vehicles/vehicles.component';
+import { InventoryComponent } from './vimalEx/inventory/inventory.component';
+import { ProductsComponent } from './project/app-cart/products/products.component';
+import { OrderComponent } from './project/app-cart/order/order.component';
 
 // import { RouterModule } from '@angular/router';
 // import { ProductsComponent } from './products/products.component';
@@ -27,7 +32,12 @@ import { PostComponent } from './post/post.component';
     MidgetComponent,
    // ProductsComponent,
     ProductComponent,
-   PostComponent
+   PostComponent,
+   AppCartComponent,
+   VehiclesComponent,
+   InventoryComponent,
+   ProductsComponent,
+   OrderComponent
  //   SignupComponent
   
   ],

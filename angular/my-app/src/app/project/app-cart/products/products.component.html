@@ -1,0 +1,160 @@
+<div class="container">
+    <main>
+        <ul class="nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Products</a>
+            </li>
+            <select (change)="filterItems($event)"> 
+                <!-- <select>="filterItems($event.target.value)"> -->
+                <option>Category</option>
+                <option>food</option>
+                <option>clothing</option>
+                <option>furniture</option>
+                <option>music</option>
+                <option>books</option>
+                <option>electronics</option>
+            </select>
+
+            <div [ngClass]="{favorite:v.fav}" *ngFor="let v of products">
+                <h6>{{v.id}} {{v.title}} {{v.category}} {{v.price}}</h6>
+                <button (click)="setFavorite(v)">Favorite</button>
+                <button (click)="addToOrder(v)">Add Order</button>
+
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Order</a>
+            </li>
+
+        </ul>
+        <!--
+        <div class="py-5 text-center">
+
+            <h2>Checkout form</h2>
+            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        </div>
+    -->
+        <div class="both-boxes">
+            <div class="your-cart">
+                <h4 class="y-cart">
+                    <span class="text-primary">Your cart</span>
+                    <!-- <span class="badge bg-primary rounded-pill">3</span> -->
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="cart-box">
+                        <div>
+                            <h6 class="my-0">Product name</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <!-- <span class="text-muted">$12</span> -->
+                    </li>
+                    <li class="cart-box">
+                        <div>
+                            <h6 class="my-0">Second product</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <!-- <span class="text-muted">$8</span> -->
+                    </li>
+                    <li class="cart-box">
+                        <div>
+                            <h6 class="my-0">Third item</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <!-- <span class="text-muted">$5</span> -->
+                    </li>
+                    <li class="cart-box">
+                        <div class="text-success">
+                            <h6 class="my-0">Promo code</h6>
+                            <!-- <small>EXAMPLECODE</small> -->
+                        </div>
+                        <!-- <span class="text-success">−$5</span> -->
+                    </li>
+                    <li class="total">
+                        <span>Total (USD)</span>
+                        <!-- <strong>$20</strong> -->
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div class="billing">
+                <h4 class="mb-3">Billing address</h4>
+                <div class="row g-3">
+
+
+                    <div class="col-md-5">
+                        <select class="form-select" id="department" required>
+                            <option value="">Choose...</option>
+                            <option>Electronics</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid department.
+                        </div>
+                    </div>
+                    <div>
+                        <!-- <input type='text' [value]="title" (input)=""> -->
+                        <!-- <button (click)="">Add</button> -->
+                    </div>
+
+                </div>
+                <!-- <form class="needs-validation" novalidate>
+
+                    <div class="col-a">
+                        <div class="prod-a1">
+                            Id:</br>
+                            Title:</br>
+                            Price:</br>
+                            Favorite:</br>
+                            Category:</br>
+                            <a href="#" type="button"><i class="fa fa-heart"></i></a>
+                            <a href="#" type="button"><i class="fa fa-shopping-cart"></i></a>
+
+                        </div>
+                        <div class="prod-a2">
+                            Id:</br>
+                            Title:</br>
+                            Price:</br>
+                            Favorite:</br>
+                            Category:</br>
+                            <a href="#" type="button"><i class="fa fa-heart"></i></a>
+                            <a href="#" type="button"><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="col-b">
+                        <div class="prod-b1">
+                            Id:</br>
+                            Title:</br>
+                            Price:</br>
+                            Favorite:</br>
+                            Category:</br>
+                            <a href="#" type="button"><i class="fa fa-heart"></i></a>
+                            <a href="#" type="button"><i class="fa fa-shopping-cart"></i></a>
+
+                        </div>
+                        <div class="prod-b2">
+                            Id:</br>
+                            Title:</br>
+                            Price:</br>
+                            Favorite:</br>
+                            Category:</br>
+                            <a href="#" type="button"><i class="fa fa-heart"></i></a>
+                            <a href="#" type="button"><i class="fa fa-shopping-cart"></i></a>
+
+                        </div>
+
+
+                    </div>
+
+                </form> -->
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- <h1>Vehicles
+    <h1> -->
